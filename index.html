@@ -191,17 +191,6 @@
        .tripple-icon{
         display: block;
        }
-       .mobile-nav{
-        display: flex;
-        width: 60%;
-        background-color: danger;
-       }
-       .mainlogo{
-        width: 100%;
-       }
-       .mobile-nav-icon{
-        width: auto;
-       }
        .mobile-text-style{
         font-size: 10px;
        }
@@ -225,28 +214,38 @@
         margin-bottom: 1rem;
         padding: .5rem 1rem;
       }
+      .book-appoinment,.login{
+        width: 15rem;
+        justify-content: center;
+        font-size: 1.2rem;
+
+      }
+      .mobile-nav{
+        width: 85%;
+        padding: 2rem 2rem;
+      }
     }
     </style>
 </head>
 <body>
 <section class="container-fluid">
   <div class="row">
-  <div class="col-sm-12 col-md-8 col-lg-8 pt-4 mobile-nav col-9">
+  <div class="col-sm-12 col-md-8 col-lg-8 pt-4 mobile-nav col-11">
     <!-- column started -->
     <div>
       <!-- logo -->
-      <img src="images/header-image/MainLogo.png" class="mainlogo
+      <img src="images/header-image/MainLogo.png" class="
       img-fluid px-5 mainLogo">
     </div>
   </div>
   <!-- end column -->
-  <div class="col-sm-4 col-md-4 col-lg-4 pt-5 col-3">
+  <div class="col-sm-4 col-md-4 col-lg-4 pt-5 col-1 rem float-right">
     <!-- started column -->
-    <span class="tripple-icon justify-content-end mobile-nav-icon float-right w-50" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-    <div class="d-flex justify-content-end">
+    <span class="tripple-icon justify-content-end mobile-nav-icon" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    <div class="d-flex justify-content-end justify-md-content-center">
       <li class="nav-item dropdown d-flex ">
-        <button class="book-appoinment btn-info px-3 mx-2 text-light fw-bold d-n-mb">book an appoinment</button>
-        <button class="login px-3 py-2 mx-1 text-light fw-bold nav-link dropdown-toggle btn-secondary d-n-mb" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>login</span><img src="images/header-image/layer_163.png" class="px-2"></button>
+        <button class="book-appoinment btn-info px-3 mx-2 text-light fw-bold">book an appoinment</button>
+        <button class="login px-3 py-2 mx-1 text-light fw-bold nav-link dropdown-toggle btn-secondary" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>login</span><img src="images/header-image/layer_163.png" class="px-2"></button>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li>
               <a class="dropdown-item" href="#">Temps</a>
@@ -572,10 +571,20 @@
           </div> -->
         </form>   
       </div>  
-      <div class="col-sm-8 col-md-8 col-lg-8">
-          <video class="video-fluid w-100 h-100" autoplay loop controls muted style="pointer-events: none;">
-            <source src="video/video-bg.mp4" type="video/mp4">
-          </video>
+      <div class="col-sm-8 col-md-8 col-lg-8" style="position: relative;">
+          <div class="">
+              <video class="video-fluid w-100 h-100" autoplay loop controls muted style="pointer-events: none;">
+                <source src="video/video-bg.mp4" type="video/mp4">
+              </video>
+          </div>
+
+          <div class="text-light" style="position: absolute; top: 2rem; left: 1rem;">
+            <h1 class="text-center text-uppercase display-4 fw-bold">hire temp for your dental offices</h1>
+          </div>
+
+          <div class="text-light" style="position: absolute; bottom: 3rem; left: 3rem;">
+            <h1 class="text-center text-uppercase fs-3 fw-bold" style="padding: 0rem 10rem;">we provide solution to post temporary josb to full the requrirements of your dental office</h1>
+          </div>
       </div>    
     </div>
 </section>
