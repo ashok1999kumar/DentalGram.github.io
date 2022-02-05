@@ -272,7 +272,6 @@
         font-size: 2rem;
         margin: -1rem;
         text-align: center;
-        background-color: red;
       }
       .solution{
         font-size: 1rem;
@@ -348,34 +347,6 @@
         <img src="images/header-image/layer37.png" class="img-fluid store-img px-4  d-n-all">
       </div>
       <!-- mobile view -->
-      <div id="myNav" class="overlay">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <div class="overlay-content"> <!-- class use change style-->
-          <!-- <img src="images/header-image/MainLogo.png" class="img-fluid p-5"> -->
-          <hr class="bg-light" style="height: 2px;">
-          <ul class="navbar-nav text-capitalize fw-bold fs-4 mobile-text-style">      
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">treatments</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">about us </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">blog</a>
-                </li>
-                 <li class="nav-item">
-                  <a class="nav-link" href="#">contact us </a>
-                </li>
-              </ul>
-             <div class="d-flex p-5">
-                <img src="images/header-image/layer36.png" class="img-fluid w-50">
-                <img src="images/header-image/layer37.png" class="img-fluid w-50">
-             </div>
-        </div>
-      </div>
     </div>
   </div>
 </section>
@@ -1045,11 +1016,11 @@
     x[n].className += " active";
   }
   function openNav() {
-  document.getElementById("myNav").style.width = "100%";
+  document.getElementById("mynav").style.width = "100%";
 }
 
 function closeNav() {
-  document.getElementById("myNav").style.width = "0%";
+    document.getElementById("mynav").style.width = "0%";
 }
 </script>
     <!-- Option 2: Separate Popper and Bootstrap JS -->
