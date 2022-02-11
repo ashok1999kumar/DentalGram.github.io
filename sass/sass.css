@@ -1,0 +1,415 @@
+:root {
+  --btncolor: #16D9D6;
+  --btncolortwo: #F9F9F6;
+  --input-invalid: red;
+  --border: #0a99ec;
+  --black: #0000;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+form {
+  margin: 0 2rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/*dentalgram list*/
+.dentalgram-list:nth-child(odd) {
+  background-color: #16D9D6;
+  padding: 1.1rem;
+  border-radius: 2rem;
+  font-weight: bold;
+  color: #F9F9F6;
+}
+
+.dentalgram-list:nth-child(odd) img {
+  background-color: #F9F9F6;
+  padding: 1.1rem;
+  border-radius: 2rem;
+  color: #16D9D6;
+  width: 6rem;
+  height: 6rem;
+}
+
+.dentalgram-list:nth-child(even) {
+  background-color: #F9F9F6;
+  padding: 1.1rem;
+  border-radius: 2rem;
+  font-weight: bold;
+  color: #16D9D6;
+}
+
+.dentalgram-list:nth-child(even) img {
+  background-color: #16D9D6;
+  padding: 1.1rem;
+  border-radius: 2rem;
+  color: #16D9D6;
+  width: 6rem;
+  height: 6rem;
+}
+
+.dental-service-icon {
+  width: 7rem;
+  height: 7rem;
+  margin: .3rem;
+}
+
+/*footer css*/
+.footer-style {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background: url("images/header-image/RoundedRectangle13.png");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin-top: 8rem;
+  padding: 3rem 0;
+  color: #f8efef;
+  font-size: 2rem;
+  background: #16D9D6;
+  border-radius: 2rem;
+}
+
+.footer-data {
+  background-color: black;
+  display: block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-row:nth-child(even) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.main-row .dentalgram-list {
+  margin: 1rem 0;
+}
+
+/*end*/
+.login, .book-appoinment {
+  border-radius: 2rem;
+  font-size: 1.7rem;
+}
+
+.nav-item {
+  font-size: 2rem;
+}
+
+li {
+  padding: 1rem;
+}
+
+.nav-link {
+  color: var(--black);
+}
+
+.nav-link:hover {
+  color: var(--btncolor);
+}
+
+.store-img {
+  width: 16.6rem;
+  padding: .5rem;
+}
+
+/*teeth*/
+.card {
+  border-radius: 2rem;
+  border: 0.3rem solid var(--border);
+  padding: 3rem;
+}
+
+.choose-form-color {
+  color: var(--btncolor);
+  font-size: 2rem;
+}
+
+.card-icon {
+  margin-top: -2rem;
+  margin-left: 5rem;
+  position: absolute;
+  z-index: 1;
+  width: 7rem;
+  border: 0.3rem solid var(--border);
+  border-radius: 50%;
+}
+
+/*form video*/
+input.invalid {
+  background-color: var(--input-invalid);
+}
+
+label {
+  font-size: 1.5rem;
+}
+
+/* Hide all steps by default: */
+.tab {
+  display: none;
+}
+
+.btn-next, .btn-prev {
+  background-color: blue;
+  color: #ffffff;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.btn-next, .btn-prev:hover {
+  opacity: 0.8;
+}
+
+#prevBtn {
+  background-color: var(--btncolortwo);
+}
+
+#regForm {
+  height: 29rem;
+}
+
+/* Make circles that indicate the steps of the form: */
+.step {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbbbbb;
+  border: none;
+  border-radius: 50%;
+  display: inline-block;
+  opacity: 0.5;
+}
+
+.step.active {
+  opacity: 1;
+}
+
+/*mobile view css*/
+.overlay {
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  background-color: var(--btncolor);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.overlay-content {
+  position: relative;
+  top: 5%;
+  padding-left: 4rem;
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.overlay a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: #818181;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #f1f1f1;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 2rem;
+  right: 4rem;
+  font-size: 6rem;
+}
+
+.tripple-icon {
+  display: none;
+}
+
+/* Mark the steps that are finished and valid: */
+.step.finish {
+  background-color: #04AA6D;
+}
+
+/*nav responsive*/
+@media screen and (max-width: 998px) {
+  html {
+    font-size: 50%;
+  }
+  .d-n-mb {
+    display: none;
+  }
+  form {
+    margin: 5rem;
+  }
+  .tripple-icon {
+    display: block;
+  }
+  .d-n-all {
+    display: none;
+  }
+  .hire {
+    font-size: 2.5rem;
+    margin: -1rem;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 40%;
+  }
+  .footer-data {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .borderd {
+    border: 0.1rem solid var(--btncolor);
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+    padding: .5rem 1rem;
+  }
+  .tripple-icon {
+    display: block;
+  }
+  form {
+    margin: 6rem;
+  }
+  .mainLogo {
+    width: 80%;
+  }
+  .d-n-mb {
+    display: none;
+  }
+  .navbar {
+    color: black;
+  }
+  .main-menu {
+    display: inline;
+  }
+  .d-n-all {
+    display: none;
+  }
+  .hire {
+    font-size: 2.5rem;
+    margin: -1rem;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  html {
+    font-size: 45%;
+  }
+  .card-bg {
+    padding: 1.5rem;
+  }
+  .card-bg .icon {
+    padding: .5rem;
+  }
+  .card-bg p {
+    padding: 2rem;
+  }
+  .store-img {
+    width: 10rem;
+  }
+  .d-n-mb {
+    display: none;
+  }
+  .navbar {
+    color: black;
+  }
+  .d-n-all {
+    display: none;
+  }
+  .tripple-icon {
+    display: block;
+  }
+  .mobile-text-style {
+    font-size: 10px;
+  }
+  .tripple-icon {
+    display: block;
+  }
+  form {
+    margin: 7rem;
+  }
+  .nav-link:hover {
+    color: var(--btncolortwo);
+  }
+  .dental-service-icon {
+    width: 7rem;
+    height: 7rem;
+    margin: .3rem;
+  }
+  .book-appoinment, .login {
+    width: 15rem;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    font-size: 1.2rem;
+  }
+  .mobile-nav {
+    width: 85%;
+    padding: 2rem 2rem;
+  }
+  .hire {
+    font-size: 2rem;
+    margin: -1rem;
+    text-align: center;
+  }
+  .solution {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+  .social-icon-footer {
+    width: 100%;
+    width: 5rem;
+    height: 5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .footer-mainLogo {
+    width: 70%;
+    height: auto;
+  }
+  .show {
+    margin-top: 3rem;
+    width: 20rem;
+    display: block;
+    padding: 1.5rem;
+    font-size: 1.4rem;
+  }
+  .mainLogo {
+    width: 40rem;
+    height: auto;
+  }
+}
+/*# sourceMappingURL=sass.css.map */

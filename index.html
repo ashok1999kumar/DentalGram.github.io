@@ -7,285 +7,8 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="sass/sass.css">
     <title>DentalGram</title>
-    <style type="text/css">
-      :root{
-        --btncolor: #16D9D6;
-        --btncolortwo: #F9F9F6;
-        --input-invalid: red;
-        --border: #0a99ec;
-      }
-      /*nav style*/
-      *{
-        margin: 0;padding: 0;box-sizing: border-box;
-        font-family: arial;
-      }
-      html{
-        font-size: 62.5%;
-      }
-      form{
-        margin: 0 2rem;
-      }
-      .login,.book-appoinment{
-        border-radius: 2rem;font-size: 1.7rem;
-      }
-      .nav-item{
-        font-size: 2rem;
-      }
-      li{
-        padding: 1rem;
-      }
-      .nav-link{
-        color: black;
-      }
-      .nav-link:hover{
-        color: var(--btncolor);
-      }
-      /*dentalgram list*/
-      .dentalgram-list{
-        background:url('images/header-image/BackGroundImage.png');background-size: 100% 100%;
-      }
-      /*emergancy*/
-      .store-img{ width: 16.6rem; padding: .5rem; 
-      }
-      .card-bg,.icon-even{
-        background-color: var(--btncolor);padding: 1.1rem; border-radius: 2rem; color: var(--btncolortwo);
-      }
-      .card-bg-even,.icon{
-        background-color: var(--btncolortwo);padding: 1.1rem; border-radius: 2rem; color: var(--btncolor);
-      }
-      .icon,.icon-even{
-        width:6.5rem;height: 6.5rem; padding: 1rem;
-      }
-      /*teeth*/
-      .card{
-        border-radius: 2rem; border: .3rem solid var(--border);padding: 3rem;
-      }
-      .choose-form-color{color: var(--btncolor);font-size: 2rem;
-      }
-      .card-icon{
-        margin-top:-2rem;margin-left: 5rem; position:absolute; z-index: 1;width: 7rem;
-        border: .3rem solid var(--border);
-        border-radius: 50%;
-      }
-      /*form video*/
-      input.invalid {
-        background-color: var(--input-invalid);
-      }
-      label{
-        font-size: 1.5rem;
-      }
-
-      /* Hide all steps by default: */
-      .tab {
-        display: none;
-      }
-
-      .btn-next,.btn-prev {background-color: blue;color: #ffffff;border: none;padding: 1rem 2rem;font-size: 1.5rem;cursor: pointer;
-      }
-
-      .btn-next,.btn-prev:hover {
-        opacity: 0.8;
-      }
-
-      #prevBtn {
-        background-color: var(--btncolortwo);
-      }
-      #regForm{
-        height:29rem;
-      }
-      /* Make circles that indicate the steps of the form: */
-      .step {height: 15px;width: 15px;margin: 0 2px;background-color: #bbbbbb;border: none;  border-radius: 50%;display: inline-block;opacity: 0.5;
-      }
-
-      .step.active {
-        opacity: 1;
-      }
-      /*mobile view css*/
-      .overlay {
-      height: 100%;
-      width: 0;
-      position: fixed;
-      z-index: 1;
-      background-color: var(--btncolor);
-      overflow-x: hidden;
-      transition: 0.5s;
-    }
-    .overlay {
-      height: 100%;
-      width: 0;
-      position: fixed;
-      z-index: 1;
-      top: 0;
-      left: 0;
-      overflow-x: hidden;
-      transition: 0.5s;
-    }
-
-    .overlay-content {
-      position: relative;
-      top: 25%;
-      padding-left: 4rem;
-      width: 100%;
-      margin-top: 3rem;
-    }
-
-    .overlay a {
-      text-decoration: none;
-      font-size: 1.3rem
-      color: #818181;
-      display: block;
-      transition: 0.3s;
-    }
-
-    .overlay a:hover, .overlay a:focus {
-      color: #f1f1f1;
-    }
-
-    .overlay .closebtn {
-      position: absolute;
-      top: 2rem;
-      right: 4rem;
-      font-size: 6rem;
-    }
-
-    .tripple-icon{
-      display: none;
-    }
-
-      /* Mark the steps that are finished and valid: */
-      .step.finish {
-        background-color: #04AA6D;
-      }
-      @media screen and (max-width: 1200px) {
-        .hire{
-        font-size: 3rem;
-        margin: -1rem;
-        text-align: center;
-      }
-      }
-      /*nav responsive*/
-      @media screen and (max-width: 998px) {
-        html{
-          font-size: 50%;
-        }
-       .d-n-mb{
-          display: none;
-        }
-        form{
-        margin: 5rem;
-       }
-      .tripple-icon{
-      display: block;
-      }
-      .d-n-all{
-        display: none;
-      }
-      .hire{
-        font-size: 2.5rem;
-        margin: -1rem;
-        text-align: center;
-      }
-    }
-      @media screen and (max-width: 768px) {
-       html{
-          font-size: 40%;
-       }
-       .tripple-icon{
-        display: block;
-      }
-      form{
-        margin: 6rem;
-       }
-       .mainLogo{
-        width: 80%;
-       }
-       .d-n-mb{
-          display: none;
-        }
-        .navbar{
-          color: black;
-        }
-        .main-menu{
-          display: inline;
-       }
-       .d-n-all{
-        display: none;
-       }
-       .hire{
-        font-size: 2.5rem;
-        margin: -1rem;
-        text-align: center;
-      }
-    }
-      @media screen and (max-width: 400px) {
-        .store-img{
-          width: 10rem;
-        }
-        .d-n-mb{
-          display: none;
-        }
-        .navbar{
-          color: black;
-        }
-        .d-n-all{
-        display: none;
-       }
-       .tripple-icon{
-        display: block;
-       }
-       .mobile-text-style{
-        font-size: 10px;
-       }
-       .tripple-icon{
-        display: block;
-      }
-       form{
-        margin: 7rem;
-       }
-       .nav-link:hover{
-        color: var(--btncolortwo);
-      }
-      .{
-        border: .1rem solid var(--btncolor);
-        padding: 1rem 2rem;
-        border-radius: 1rem;
-      }
-      .dental-service-icon{
-        width: 6rem; height: 6rem; margin: .3rem;
-      }
-      .borderd{
-        border: .1rem solid var(--btncolor);
-        border-radius: 2rem;
-        margin-bottom: 1rem;
-        padding: .5rem 1rem;
-      }
-      .book-appoinment,.login{
-        width: 15rem;
-        justify-content: center;
-        font-size: 1.2rem;
-
-      }
-      .mobile-nav{
-        width: 85%;
-        padding: 2rem 2rem;
-      }
-      .hire{
-        font-size: 2rem;
-        margin: -1rem;
-        text-align: center;
-      }
-      .solution{
-        font-size: 1rem;
-        padding: 0 1rem;
-      }
-      .social-icon-footer{
-        width: 5rem;
-        height: 5rem;
-        display: flex;
-      }
-    }
-    </style>
 </head>
 <body>
 <section class="container-fluid">
@@ -303,9 +26,11 @@
     <!-- started column -->
     <span style="font-size:30px;cursor:pointer" onclick="openNav()" class="tripple-icon">&#9776;</span>
     <div class="d-flex justify-content-end justify-md-content-center">
-      <li class="nav-item dropdown d-flex ">
-        <button class="book-appoinment d-n-all btn-info px-3 mx-2 text-light fw-bold">book an appoinment</button>
-        <button class="login px-3 py-2 mx-1 text-light fw-bold nav-link dropdown-toggle btn-secondary d-n-all" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>login</span><img src="images/header-image/layer_163.png" class="px-2"></button>
+      <li class="nav-item dropdown d-flex mb-justify-content-center ">
+        <button class="book-appoinment show d-n-all btn-info px-3 mx-2 text-light fw-bold">book an appoinment</button>
+        <button class="login show px-3 py-2 mx-1 text-light fw-bold nav-link dropdown-toggle btn-secondary d-n-all" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"><span>login</span>
+          <img src="images/header-image/layer_163.png" class="px-2">
+        </button>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
             <li>
               <a class="dropdown-item" href="#">Temps</a>
@@ -390,12 +115,12 @@
           <div class="tab">
             <div class="row">
               <div class="col-lg-12">
-                      <div class="mb-1">
-                          <label class="form-label  margin_bootom_0">Patient Name <span class="text-danger">*</span></label>
-                          <input name="name" id="name" type="text" class="form-control p-3" placeholder="Name">
-                          <span class="rating-error" id="name-errors"></span>
-                      </div>
-                  </div><!--end col-->
+                  <div class="mb-1">
+                      <label class="form-label  margin_bootom_0">Patient Name <span class="text-danger">*</span></label>
+                      <input name="name" id="name" type="text" class="form-control p-3" placeholder="Name">
+                      <span class="rating-error" id="name-errors"></span>
+                  </div>
+                </div><!--end col-->
 
                   <div class="col-lg-6">
                       <div class="mb-1">
@@ -418,6 +143,26 @@
                           <input name="zipcode" id="zipcode" type="text" class="form-control p-3" placeholder="Zipcode">
                       </div> 
                   </div>
+                   <div class="col-lg-6">
+                      <div class="mb-1">
+                          <label class="form-label margin_bootom_0 ">Zipcode <span class="text-danger">*</span></label>
+                          <input name="zipcode" id="zipcode" type="text" class="form-control p-3" placeholder="Zipcode">
+                      </div> 
+                  </div>
+                  <div class="col-lg-12">
+                  <div class="mb-1">
+                      <label class="form-label  margin_bootom_0">Patient Name <span class="text-danger">*</span></label>
+                      <input name="name" id="name" type="text" class="form-control p-3" placeholder="Name">
+                      <span class="rating-error" id="name-errors"></span>
+                  </div>
+                </div>
+                <div class="col-lg-12">
+                  <div class="mb-1">
+                      <label class="form-label  margin_bootom_0">Patient Name <span class="text-danger">*</span></label>
+                      <input name="name" id="name" type="text" class="form-control p-3" placeholder="Name">
+                      <span class="rating-error" id="name-errors"></span>
+                  </div>
+                </div>
             </div>
           </div>
 
@@ -630,7 +375,7 @@
         ></p>
       </div>
       <div class="row b-5">
-        <div class="col-sm-6 col-md-6 col-lg-6">
+        <div class="col-sm-6 col-md-6 col-lg-6 text-capitalize">
           <div class="d-flex borderd" style="align-items: center;
           ">
             <img src="images/header-image/Icon01_1.png" class=" dental-service-icon py-2">
@@ -640,13 +385,13 @@
           <div class="d-flex borderd" style="align-items: center;
           ">
             <img src="images/header-image/Icon02_1.png" class=" dental-service-icon py-2">
-            <p class="text-capitalize px-3 py-1 fw-bold fs-3">affortable</p>
+            <p class="text-capitalize px-3 py-1 fw-bold fs-3">compresensive</p>
           </div>
 
           <div class="d-flex borderd" style="align-items: center;
           ">
             <img src="images/header-image/Icon03_1.png" class=" dental-service-icon py-2">
-            <p class="text-capitalize px-3 py-1 fw-bold fs-3">affortable</p>
+            <p class="text-capitalize px-3 py-1 fw-bold fs-3">comprehensive</p>
           </div>
         </div>
         <!-- second column -->
@@ -654,19 +399,19 @@
             <div class="d-flex borderd" style="align-items: center;
           ">
             <img src="images/header-image/Icon04_1.png" class="img-fluid dental-service-icon py-2">
-            <p class="text-capitalize dental-service-icon px-3 py-1 fw-bold fs-3">affortable</p>
+            <p class="text-capitalize dental-service-icon px-3 py-1 fw-bold fs-3">dedicated</p>
           </div>
 
           <div class="d-flex borderd" style="align-items: center;
           ">
             <img src="images/header-image/Icon05_0.png" class=" dental-service-icon py-2">
-            <p class="text-capitalize px-3 py-1 fw-bold fs-3">affortable</p>
+            <p class="text-capitalize px-3 py-1 fw-bold fs-3">experienced</p>
           </div>
 
           <div class="d-flex borderd" style="align-items: center;
           ">
             <img src="images/header-image/Icon06_0.png" class=" dental-service-icon py-2">
-            <p class="text-capitalize px-3 py-1 fw-bold fs-3">affortable</p>
+            <p class="text-capitalize px-3 py-1 fw-bold fs-3">effective</p>
           </div>
         </div>
       </div>
@@ -677,7 +422,7 @@
 <!-- choose -->
 <section class="pt-5 container-fluid" style="background:url('images/header-image/BlueDesign.png');" style="background-size: 100% 100%;">
   <h1 class="text-capitalize text-center p-5 display-5 fw-bold">why choose dentalgram?</h1>
-  <div class="row justify-content-center mt-5 container-fluid">
+  <div class="row justify-content-center mt-5 container-fluid w-100">
     <div class="col-sm-4 col-md-4 col-lg-4 mb-5">
       <fieldset>
         <legend><img src="images/header-image/Icon01_0.png" class="card-icon" ></legend>
@@ -693,7 +438,7 @@
     </div>  
     <div class="col-sm-4 col-md-4 col-lg-4">
       <fieldset>
-          <legend class="" style=""><img src="images/header-image/Icon04_0.png" class="card-icon"></legend>
+          <legend class=""><img src="images/header-image/Icon04_0.png" class="card-icon"></legend>
           <div class="card m-4">
             <div class="card-title mt-4" style="position: relative;">
               <p class="text-capitalize choose-form-color fs-1 fw-bold">emergancy priorty</p>
@@ -706,13 +451,14 @@
     </div> 
   </div>
   <!-- second row -->
-  <div class="row justify-content-end mt-5">
+  
+  <div class="row justify-content-end mt-5 container-fluid w-100">
     <div class="col-sm-4 col-md-4 col-lg-4 mb-5">
       <fieldset>
-        <legend><img src="images/header-image/Icon02_0.png" class="card-icon" ></legend>
+        <legend><img src="images/header-image/Icon03_0.png" class="card-icon" ></legend>
         <div class="card m-4">
           <div class="card-title mt-4" style="position: relative;">
-            <p class="text-capitalize choose-form-color fs-1 fw-bold">centerally located</p>
+            <p class="text-capitalize choose-form-color fs-1 fw-bold">qualified dentiest</p>
             <p class="fw-bold fs-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
             tempor incididunt ut labore et d
             </p>
@@ -722,22 +468,22 @@
     </div>  
     <div class="col-sm-4 col-md-4 col-lg-4">
       <fieldset>
-          <legend class="" style=""><img src="images/header-image/Icon04_0.png" class="card-icon"></legend>
+          <legend class=""><img src="images/header-image/Icon04_0.png" class="card-icon"></legend>
           <div class="card m-4">
             <div class="card-title mt-4" style="position: relative;">
-              <p class="text-capitalize choose-form-color fs-1 fw-bold">qualified dentiest</p>
+              <p class="text-capitalize choose-form-color fs-1 fw-bold">emergancy priorty</p>
               <p class="fw-bold fs-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
               tempor incididunt ut labore et d
               </p>
             </div>
           </div>
         </fieldset>
-    </div>    
+    </div> 
   </div>
 </section>
 
 <!-- dental list -->
-<section class="container-fluid" style="background:url('images/header-image/BackGroundImage.png');background-size: 100% 100%;">
+<section class="container-fluid bg-image" style="background:url('images/header-image/bgimage.png'); background-size: 100% 100%; background-repeat: no-repeat">
   <!-- titttle and heading -->
       <div class="text-capitalize text-center py-5">
         <h1 class="display-3 fw-bold pt-5">dentalGram</h1>
@@ -745,164 +491,158 @@
           ours state of arts dental gram offices following dental treatment.
         </p>
       </div>
-      <div class="row" style="padding-bottom: 7rem;" >
-
-        <!-- start column -->
-        <div class="col-sm-6 col-md-6 col-lg-6 ">
+      <!-- list -->
+      <div class="container">
+        <div class="row">
           <!-- start row -->
-          <div class="row justify-content-center">
+          <div class="col-lg-12 col-md-12 col-lg-12 text-capitalize mb-5">
             <!-- start column -->
-            <div class="col-sm-8 col-md-8 col-lg-8">
-              <div class="w-100 mb-3">
-                <div class="d-flex card-bg">
-                  <img src="images/header-image/Icon01.png" class="p-3 img-fluid icon">
-                  <p class="text-capitalize p-3 fw-bold fs-2">eemrgancy dentistry</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <!-- start column -->
-            <div class="col-sm-8 col-md-8 col-lg-8">
-              <div class="w-100 mb-3">
-                <div class="d-flex card-bg-even">
-                  <img src="images/header-image/Icon02.png" class="p-3 img-fluid icon-even">
-                  <p class="text-capitalize p-3 fw-bold fs-2">invisalign clear braces</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <!-- start column -->
-            <div class="col-sm-8 col-md-8 col-lg-8">
-              <div class="w-100 mb-3">
-                <div class="d-flex card-bg">
-                  <img src="images/header-image/Icon03.png" class="p-3 img-fluid icon" style="">
-                  <p class="text-capitalize p-3 fw-bold fs-2">teeth-whitening</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <!-- start column -->
-            <div class="col-sm-8 col-md-8 col-lg-8">
-              <div class="w-100 mb-3">
-                <div class="d-flex card-bg-even">
-                  <img src="images/header-image/Icon08.png" class="p-3 img-fluid icon-even" style="">
-                  <p class="text-capitalize p-3 fw-bold fs-2">dental extrations</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <!-- start column -->
-            <div class="col-sm-8 col-md-8 col-lg-8">
-              <div class="w-100 mb-3">
-                <div class="d-flex card-bg">
-                  <img src="images/header-image/Icon07.png" class="p-3 img-fluid icon" style="">
-                  <p class="text-capitalize p-3 fw-bold fs-2">sedation dentistry</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <!-- start column -->
-            <div class="col-sm-8 col-md-8 col-lg-8">
-              <div class="w-100 mb-3">
-                <div class="d-flex card-bg-even">
-                  <img src="images/header-image/Icon08.png" class="p-3 img-fluid icon-even" style="">
-                  <p class="text-capitalize p-3 fw-bold fs-2">metal free crowns</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <!-- start col-2 -->
-        <div class="col-sm-6 col-md-6 col-lg-6 ">
-          <!-- start row -->
-          <div class="row justify-content-center">
-            <!-- start column -->
-            <div class="col-sm-8 col-md-8 col-lg-8">
-              <div class="w-100 mb-3">
-                <div class="d-flex card-bg-even">
-                  <img src="images/header-image/Icon09.png" class="p-3 img-fluid icon-even" style="">
-                  <p class="text-capitalize p-3 fw-bold fs-2">dental implants</p>
+            <div class="row justify-content-around main-row">
+              <!-- start row -->
+                <div class="col-sm-5 col-md-5 col-lg-5 dentalgram-list">
+                   <div class="d-flex">
+                     <img src="images/header-image/1.png">
+                     <p class="align-items-center justify-content-center d-flex text-center px-5 fs-1">emerancy dentistry</p>
+                   </div>
+                </div>
+                <div class="col-sm-5 col-md-5 col-lg-5 dentalgram-list">
+                   <div class="d-flex">
+                     <img src="images/header-image/2.png">
+                     <p class="align-items-center justify-content-center d-flex text-center px-5 fs-1">dental implants</p>
+                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <!-- start column -->
-            <div class="col-sm-8 col-md-8 col-lg-8">
-              <div class="w-100 mb-3">
-                <div class="d-flex card-bg">
-                  <img src="images/header-image/Icon10.png" class="p-3 img-fluid icon" style="">
-                  <p class="text-capitalize p-3 fw-bold fs-2">preventative dentistry</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <!-- start column -->
-            <div class="col-sm-8 col-md-8 col-lg-8">
-              <div class="w-100 mb-3">
-                <div class="d-flex card-bg-even">
-                  <img src="images/header-image/Icon11.png" class="p-3 img-fluid icon-even" style="">
-                  <p class="text-capitalize p-3 fw-bold fs-2">crown-&-bridge</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <!-- start column -->
-            <div class="col-sm-8 col-md-8 col-lg-8">
-              <div class="w-100 mb-3">
-                <div class="d-flex card-bg">
-                  <img src="images/header-image/Icon12.png" class="p-3 img-fluid icon" style="">
-                  <p class="text-capitalize p-3 fw-bold fs-2">denturess-technolgy</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <!-- start column -->
-            <div class="col-sm-8 col-md-8 col-lg-8">
-              <div class="w-100 mb-3">
-                <div class="d-flex card-bg-even">
-                  <img src="images/header-image/Icon13.png" class="p-3 img-fluid icon-even" style="">
-                  <p class="text-capitalize p-3 fw-bold fs-2">advance-technology</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row justify-content-center">
-            <!-- start column -->
-            <div class="col-sm-8 col-md-8 col-lg-8">
-              <div class="w-100 mb-3">
-                <div class="d-flex card-bg">
-                  <img src="images/header-image/Icon14.png" class="p-3 img-fluid icon" style="">
-                  <p class="text-capitalize p-3 fw-bold fs-2">restorative dentistry</p>
-                </div>
-              </div>
-            </div>
-          </div>
+            
 
-        </div>
+            <div class="row justify-content-around main-row">
+              <!-- start row -->
+                <div class="col-sm-5 col-md-5 col-lg-5 dentalgram-list">
+                   <div class="d-flex">
+                     <img src="images/header-image/4.png">
+                     <p class="align-items-center justify-content-center d-flex text-center px-5 fs-1">preventative dentistry</p>
+                   </div>
+                </div>
+                <div class="col-sm-5 col-md-5 col-lg-5 dentalgram-list">
+                   <div class="d-flex">
+                     <img src="images/header-image/3.png">
+                     <p class="align-items-center justify-content-center d-flex text-center px-5 fs-1">invisalign clean braces</p>
+                   </div>
+                </div>
+              </div>
 
-        <!-- end row -->
+               <div class="row justify-content-around main-row">
+              <!-- start row -->
+                <div class="col-sm-5 col-md-5 col-lg-5 dentalgram-list">
+                   <div class="d-flex">
+                     <img src="images/header-image/5.png">
+                     <p class="align-items-center justify-content-center d-flex text-center px-5 fs-1">tteth-whitening</p>
+                   </div>
+                </div>
+                <div class="col-sm-5 col-md-5 col-lg-5 dentalgram-list">
+                   <div class="d-flex">
+                     <img src="images/header-image/6.png">
+                     <p class="align-items-center justify-content-center d-flex text-center px-5 fs-1">crown-&-budges</p>
+                   </div>
+                </div>
+              </div>
+
+               <div class="row justify-content-around main-row">
+              <!-- start row -->
+                <div class="col-sm-5 col-md-5 col-lg-5 dentalgram-list">
+                   <div class="d-flex">
+                     <img src="images/header-image/8.png">
+                     <p class="align-items-center justify-content-center d-flex text-center px-5 fs-1">dental extractions</p>
+                   </div>
+                </div>
+                <div class="col-sm-5 col-md-5 col-lg-5 dentalgram-list">
+                   <div class="d-flex">
+                     <img src="images/header-image/7.png">
+                     <p class="align-items-center justify-content-center d-flex text-center px-5 fs-1">dentures & portials</p>
+                   </div>
+                </div>
+              </div>
+
+               <div class="row justify-content-around main-row">
+              <!-- start row -->
+                <div class="col-sm-5 col-md-5 col-lg-5 dentalgram-list">
+                   <div class="d-flex">
+                     <img src="images/header-image/9.png">
+                     <p class="align-items-center justify-content-center d-flex text-center px-5 fs-1">sedation dentistry</p>
+                   </div>
+                </div>
+                <div class="col-sm-5 col-md-5 col-lg-5 dentalgram-list">
+                   <div class="d-flex">
+                     <img src="images/header-image/10.png">
+                     <p class="align-items-center justify-content-center d-flex text-center px-5 fs-1">advance-technology</p>
+                   </div>
+                </div>
+              </div>
+
+               <div class="row justify-content-around main-row">
+              <!-- start row -->
+                <div class="col-sm-5 col-md-5 col-lg-5 dentalgram-list">
+                   <div class="d-flex">
+                     <img src="images/header-image/12.png">
+                     <p class="align-items-center justify-content-center d-flex text-center px-5 fs-1">metal free crowers</p>
+                   </div>
+                </div>
+                <div class="col-sm-5 col-md-5 col-lg-5 dentalgram-list">
+                   <div class="d-flex">
+                     <img src="images/header-image/11.png">
+                     <p class="align-items-center justify-content-center d-flex text-center px-5 fs-1">restorative dentistry</p>
+                   </div>
+                </div>
+              </div>
+
+              <div class="row justify-content-around main-row">
+              <!-- start row -->
+                <div class="col-sm-5 col-md-5 col-lg-5 dentalgram-list">
+                   <div class="d-flex">
+                     <img src="images/header-image/13.png">
+                     <p class="align-items-center justify-content-center d-flex text-center px-5 fs-1">porcelain veners</p>
+                   </div>
+                </div>
+                <div class="col-sm-5 col-md-5 col-lg-5 dentalgram-list">
+                   <div class="d-flex">
+                     <img src="images/header-image/14.png">
+                     <p class="align-items-center justify-content-center d-flex text-center px-5 fs-1">cosmatic dentistry</p>
+                   </div>
+                </div>
+              </div>
+
+              <div class="row justify-content-around main-row">
+              <!-- start row -->
+                <div class="col-sm-5 col-md-5 col-lg-5 dentalgram-list">
+                   <div class="d-flex">
+                     <img src="images/header-image/16.png">
+                     <p class="align-items-center justify-content-center d-flex text-center px-5 fs-1">root canal theropy</p>
+                   </div>
+                </div>
+                <div class="col-sm-5 col-md-5 col-lg-5 dentalgram-list">
+                   <div class="d-flex">
+                     <img src="images/header-image/15.png">
+                     <p class="align-items-center justify-content-center d-flex text-center px-5 fs-1">dental checkups</p>
+                   </div>
+                </div>
+              </div>
+            </div>
+          </div>
+      </div>
+      </div>
       </div>
 </section>
 
+
 <!-- emergancy -->
 <section class="container-fluid" style="background-image:linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2)), url('images/header-image/DentistEmergency.png');">
-  <div class="row" style="padding-bottom:7rem">
+  <div class="row">
     <div class="col-sm-6 col-md-6 col-lg-6">
       <div class="row d-flex justify-content-center">
-        <div class="col-sm-8 col-md-8 col-lg-8 m-5 col-10 rounded" style="background-image:linear-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.4)) ">
+        <div class="col-sm-8 col-md-8 col-lg-8 m-5 col-10 rounded" style="background-image:linear-gradient(rgba(255,255,255,0.4),rgba(255,255,255,0.4)); background-size: 100% 100%; background-repeat: no-repeat; ">
             <div class="text-capitalize text-center p-5 m-3">
               <h1 style="color:var(--btncolor);" class="display-3 fw-bold">emerancy?</h1>
-              <p class="display-5 fs-2 fw-bold py-3">we fondaly welcome how patient & dental emerancy!</p>
+              <p class=" fs-2 py-3 display-5">we fondaly welcome how patient & dental emerancy!</p>
               <button class="btn w-100 p-3 fs-4 fw-bold text-capitalize bg-info">
                 book an appoinment
               </button>
@@ -912,16 +652,15 @@
       
     </div>
     <div class="col-sm-6 col-md-6 col-lg-6"></div>
-    <!-- <div class="col-sm-5 col-md-5 col-lg-5"></div> -->
   </div>
 </section>
 <!-- footer section -->
-<section class="bg-dark">
+<section class="footer-data">
   <div class="container pb-5">
     <div class="row container text-light ">
-      <div class="col-sm-7 col-md-7 col-lg-7">
+      <div class="col-sm-9 col-md-9 col-lg-9 col-12 align-items-center">
         <div class="mt-5 footer-icon">
-          <img src="images/header-image/MainLogo.png">
+          <img src="images/header-image/MainLogo.png" class="footer-mainLogo">
           <div class="social-icon-footer">
             <img src="images/header-image/Facebook.png" class="m-1">
             <img src="images/header-image/Twitter.png" class="m-1">
@@ -948,8 +687,8 @@
       </div>  
 
       <!-- start col -->
-      <div class="col-sm-5 col-md-5 col-lg-5 mt-5 d-n-all">
-        <div class="m-5 py-5" style="display: grid;place-items:center;background: url('images/header-image/RoundedRectangle13.png'); background-repeat: no-repeat; background-size: 100% 100%; ">
+      <div class="col-sm-3 col-md-3 col-lg-3 col-0 d-n-all">
+        <div class="footer-style">
           <h3 class="text-center text-capitalize p-4">download our app</h3>
           <img src="images/header-image/Layer17.png" style="width:20rem">
         </div>
@@ -957,11 +696,13 @@
     </div>
     <!-- copy right -->
   </div>
-  <div class="bg-info fs-3">
-      <div class="d-flex justify-content-between p-2 px-5 container">
+  <div class="row w-100 bg-info text-capitalize text-center fs-4 p-3">
+    <div class="col-sm-6 col-md-6 col-lg-6">
       <div class="p-2 fw-bold">
         <p>2022 #dentalGram.Inc. All Rights reserved</p>
       </div>
+    </div>
+    <div class="col-sm-6 col-md-6 col-lg-6">
       <div class="p-2 fw-bold">
         <p>terms & conditions | private policy | about us</p>
       </div>
